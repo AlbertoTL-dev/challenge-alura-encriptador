@@ -1,0 +1,295 @@
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap";
+
+/*Propiedades globales*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Lato', sans-serif;
+}
+
+body{
+  background-color: #F3F5FC;
+    
+}
+
+
+textarea{
+    background-color: #F3F5FC;
+    color: #0A3871;
+    padding: 0px 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    border: 5px solid transparent;
+    border-radius: 25px;
+    resize: none;
+    transition: 1s;
+
+}
+
+textarea::placeholder{
+    color: #0A3871;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.input-text{
+    padding-bottom: 400px;
+}
+
+/*Propiedades botones*/
+.btn{
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    -webkit-box-shadow: 0px 5px 3px 0px #38424C;
+    -moz-box-shadow: 0px 3px 0px 0px #38424C;
+    box-shadow: 0px 5px 3px 0px #38424C;
+    transition: 0.7s;
+}
+
+.btn:hover{
+    background-color: #e5e5e5;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 1px 0px #38424C;
+    -moz-box-shadow: 0px 2px 1px 0px #38424C;
+    box-shadow: 0px 2px 1px 0px #38424C;
+    transform: translateY(3px);
+}
+
+.btns-herramientas{
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btns-inputs{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#btns-herramientas{
+    justify-content: space-around;
+    margin-left: 25px;
+}
+/*Fin propiedades botones*/
+
+
+
+
+/*Encabezado*/
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header a{
+    text-decoration: none;
+}
+
+.container-logo-alura{
+    margin: 10px;
+}
+
+.logo-alura{
+    object-fit: contain;
+    transition: 1s;
+}
+
+.logo-alura:hover{
+    transform: translateY(-3px);
+}
+
+.titulo-principal{
+    color: #ffffff;
+    margin: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+/*Fin del encabezado*/
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Seccion encriptar*/
+.container-encriptar{
+    width: 60%;
+    padding: 20px;
+    margin: 20px
+}
+
+.advertencia{
+    display: inline-block;
+    margin: 5px 0px;
+}
+
+.advertencia > h6{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+/*Fin de seccion encriptar*/
+
+
+/*Seccion desencriptar*/
+.container-desencriptar{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.container-desencriptar-shadow{
+    transform: translateY(5px);
+    -webkit-box-shadow: 0px 5px 5px 5px #38424C;
+    -moz-box-shadow: 0px 5px 5px 5px #38424C;
+    box-shadow: 0px 5px 5px 5px #38424C;
+}
+
+.container-cubierta{
+    background-color: white;
+    width: 320px;
+    height: 390px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    border-radius: 25px;
+    text-align: center;
+}
+/*Fin seccion desencriptar*/
+
+
+
+
+.logo-social-media{
+    max-width: 10%;
+    max-height: 10%;
+    transition: 1s;
+}
+
+.logo-social-media:hover{
+    transform:translateY(-10px);
+}
+/*Fin del footer*/
+
+
+
+/*
+Aun tengo que mejorar los medias queries con
+respecto a la animación de encriptar y desencriptar, y
+con la cubierta del panel de desencriptar.
+*/
+
+
+/*Media 1280*/
+@media screen and (max-width: 1280px){
+    .input-text{
+        padding-bottom: 300px;
+    }
+}
+
+/*Media 1097*/
+@media screen and (max-width: 1098px){
+    .input-text{
+        padding-bottom: 100px;
+    }
+}
+
+/*Media 1024*/
+@media screen and (max-width: 1024px){
+    textarea{
+        width: 96%;
+        font-size:medium;
+    }
+    .btn{
+        width: 25%;
+    }
+    .container-encriptar{
+        width: 80%;
+        margin: 20px auto;
+        padding-right: 20px;
+    }
+    .container-desencriptar{
+        width:40%;
+        margin: 20px auto;
+        padding-right: 35px;
+    }
+    .advertencia > h6{
+        font-size: medium;
+    }
+    .container-cubierta{
+        width: 40%;
+        height: 53%;
+    }
+
+    .input-text{
+        padding-bottom: 100px;
+    }
+
+    
+    
+}
+
+/*Media 768*/
+@media screen and (max-width: 768px){
+    textarea{
+        width: 95%;
+        font-size:medium;
+    }
+    .btn{
+        width: 40%;
+    }
+    .container-encriptar{
+        width: 80%;
+        padding-right: 25px;
+    }
+    .container-desencriptar{
+        width: 56.5%;
+        padding-right: 35px;
+    }
+    .container-cubierta{
+        width: 56%;
+        height: 455px;
+    }
+    .animacion{
+        width: 60%;
+        height: 50%;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 12%;
+        margin: auto;
+    }
+    .logo-social-media{
+        max-width: 15%;
+        max-height: 15%;
+        transition: 1s;
+    }
+
+    .input-text{
+        padding-bottom: 100px;
+    }
+}
+
+/*Media 560*/
+@media screen and (max-width: 560px){
+    .container-encriptar{
+        padding-right: 30px;
+    }
+
+    .input-text{
+        padding-bottom: 100px;
+    }
+}
